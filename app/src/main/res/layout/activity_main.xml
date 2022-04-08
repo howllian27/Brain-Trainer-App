@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="67dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="328dp"
+        android:layout_marginBottom="504dp"
+        android:background="#FFC107"
+        android:gravity="center"
+        android:text="30s"
+        android:textAlignment="center"
+        android:textSize="38sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/scoreBoard"
+        android:layout_width="110dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="201dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="#B303A9F4"
+        android:gravity="center"
+        android:text="0/0"
+        android:textSize="38sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/timer"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="33dp"
+        android:gravity="center"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/scoreBoard"
+        app:layout_constraintStart_toEndOf="@+id/timer"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="350dp"
+        android:layout_height="210dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="29dp"
+        app:columnCount="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timer"
+        app:rowCount="2">
+
+        <Button
+            android:id="@+id/ans1"
+            android:backgroundTint="#E91E63"
+            android:gravity="fill"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:onClick="selectAns"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="60sp"
+            android:textStyle="bold"
+            app:cornerRadius="0dp"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+
+        <Button
+            android:id="@+id/ans2"
+            android:backgroundTint="#673AB7"
+            android:gravity="fill"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:onClick="selectAns"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="60sp"
+            android:textStyle="bold"
+            app:cornerRadius="0dp"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+
+        <Button
+            android:id="@+id/ans3"
+            android:backgroundTint="#03A9F4"
+            android:gravity="fill"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:onClick="selectAns"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="60sp"
+            android:textStyle="bold"
+            app:cornerRadius="0dp"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+
+        <Button
+            android:id="@+id/ans4"
+            android:backgroundTint="#8BC34A"
+            android:gravity="fill"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:onClick="selectAns"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="60sp"
+            android:textStyle="bold"
+            app:cornerRadius="0dp"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <TextView
+        android:id="@+id/ansComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="106dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="126dp"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
+
+    <Button
+        android:id="@+id/playAgain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="153dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="164dp"
+        android:backgroundTint="#DCDCDC"
+        android:onClick="replay"
+        android:text="Play Again"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.322"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
+</androidx.constraintlayout.widget.ConstraintLayout>
